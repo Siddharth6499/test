@@ -20,8 +20,6 @@ class CommentController extends AbstractController
             $logger->info('Voting up!');
             $currentVoteCount = rand(50, 100);
         }else{
-            $logger->info('Voting down!');
-            $currentVoteCount = rand(0, 50);
         }
 
         return $this->json(['votes' => $currentVoteCount]);
